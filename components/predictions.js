@@ -17,7 +17,7 @@ export default function Predictions({ predictions, submissionCount }) {
   if (submissionCount === 0) return;
 
   return (
-    <section className="w-full my-10">
+    <section className="w-full my-10 rounded-xl">
       <h2 className="text-center text-3xl font-bold m-6">Results</h2>
 
       {submissionCount > Object.keys(predictions).length && (

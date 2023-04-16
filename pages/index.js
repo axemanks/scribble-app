@@ -31,6 +31,7 @@ export default function Home() {
     // track submissions so we can show a spinner while waiting for the next prediction to be created
     setSubmissionCount(submissionCount + 1);
 
+    // filters bad words
     const prompt = e.target.prompt.value
       .split(/\s+/)
       .map((word) => (naughtyWords.en.includes(word) ? "something" : word))
@@ -100,8 +101,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
-      <main className="container max-w-[1024px] mx-auto p-5 ">
-        <div className="container max-w-[512px] mx-auto">
+      <main className="container max-w-[1024px] mx-auto ">
+        <div className="container max-w-[512px] mx-auto ">
           <hgroup>
             <h1 className="text-center text-5xl font-bold m-4">
               {pkg.appName}
