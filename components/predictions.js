@@ -58,7 +58,7 @@ export function Prediction({ prediction, showLinkToNewScribble = false }) {
     setPredictionUrl(url);
     
   }, []); // only runs on page load
-    console.log("🚀 ~ file: predictions.js:59 ~ useEffect ~ url:", predictionUrl)
+
 
   
 
@@ -123,17 +123,15 @@ export function Prediction({ prediction, showLinkToNewScribble = false }) {
               <PlusCircleIcon className="icon" />
               Create a new scribble
             </button>
-          </Link>
-
-          
-          
-        )}
-        <BackToTopButton />
-        {/* social media buttons */}
+          </Link>     
+          )}
+        {!showLinkToNewScribble ? <BackToTopButton /> : null }     
         
       </div>
-      <div>
+      {/* social media buttons */}
+      <div className="social-media-buttons relative flex-row">
         <>
+          
       <FacebookShareButton
           url={predictionUrl}
         quote={'Check this out!'}

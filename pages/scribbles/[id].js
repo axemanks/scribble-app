@@ -2,7 +2,7 @@ import { Prediction } from "components/predictions";
 import Head from "next/head";
 import pkg from "../../package.json";
 
-export default function Scribble({ prediction, baseUrl }) {
+export default function Scribble({ prediction, baseUrl, ogImgUrl }) {
   return (
     <div>
       <Head>

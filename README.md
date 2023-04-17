@@ -1,3 +1,22 @@
+# Updates
+## added social media share icons and cleaned up fonts an layout a bit
+
+# ToDo
+add image preview to be sent along with link when sharing to social media
+
+Would like to implement a dashboard to see prevous generations, would require auth
+Or maybe a front end where you can see community generated items.
+
+# Open Graph notes
+The landscape rectangle (1200 × 630 pixels) looks fantastic on Facebook shares, justifiably because Facebook develops the Open Graph system.
+The minimum requirement is 200 by 200 pixels.
+should not be more than 8 MB
+
+og:image is needing to be passed and it is set in the header, but the url needs to be dynamic depending on what
+prediction is being displayed
+The url is working now, just need to figure out how ot implement getting the new screenshot of image, or maybe just display the AI generated. I think it would look better to have the scetch and AI image in the preview.
+
+-------------------------------------------------------------------------
 # 🖍️ Scribble Diffusion
 
 Try it out at [scribblediffusion.com](https://scribblediffusion.com)

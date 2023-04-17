@@ -87,6 +87,7 @@ export default function Home() {
 
     setIsProcessing(false);
   };
+  
 
   return (
     <>
@@ -97,8 +98,10 @@ export default function Home() {
         <meta property="og:description" content={pkg.appMetaDescription} />
         <meta
           property="og:image"
+          
           content={`${HOST}/og-b7xwc4g4wrdrtneilxnbngzvti.jpg`}
         />
+          
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
