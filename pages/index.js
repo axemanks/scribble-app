@@ -39,7 +39,7 @@ export default function Home() {
 
     setError(null);
     setIsProcessing(true);
-
+// take the scribble and put it into fileUrl to be set to upload
     const fileUrl = await uploadFile(scribble);
 
     const body = {
@@ -48,6 +48,7 @@ export default function Home() {
       structure: "scribble",
     };
 
+    // sends to the node js backend api route
     const response = await fetch("/api/predictions", {
       method: "POST",
       headers: {

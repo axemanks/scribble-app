@@ -6,6 +6,8 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import Loader from "components/loader";
 import BackToTopButton from '../components/BackToTopButton';
 
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share';
+
 export default function Predictions({ predictions, submissionCount }) {
   const scrollRef = useRef(null);
 
@@ -46,6 +48,19 @@ export default function Predictions({ predictions, submissionCount }) {
 
 export function Prediction({ prediction, showLinkToNewScribble = false }) {
   const [linkCopied, setLinkCopied] = useState(false);
+  const [predictionUrl, setPredictionUrl] = useState("");
+
+  // generate URL on page load so it can be passed to social media buttons
+  useEffect(() => {
+    const url = window.location.origin +
+    "/scribbles/" +
+    (prediction.uuid || prediction.id);
+    setPredictionUrl(url);
+    
+  }, []); // only runs on page load
+    console.log("🚀 ~ file: predictions.js:59 ~ useEffect ~ url:", predictionUrl)
+
+  
 
   const copyLink = () => {
     const url =
@@ -109,9 +124,33 @@ export function Prediction({ prediction, showLinkToNewScribble = false }) {
               Create a new scribble
             </button>
           </Link>
+
           
-        )}<BackToTopButton />
+          
+        )}
+        <BackToTopButton />
+        {/* social media buttons */}
+        
       </div>
+      <div>
+        <>
+      <FacebookShareButton
+          url={predictionUrl}
+        quote={'Check this out!'}
+        hashtag="#AI #replicate"
+      >
+        <FacebookIcon size={32} round />
+      </FacebookShareButton>
+
+      <TwitterShareButton
+          url={predictionUrl}
+        quote={'Check this out!'}
+        hashtag="#AI #replicate"
+      >
+        <TwitterIcon size={32} round />
+          </TwitterShareButton>
+        </>
+    </div>
       
     </div>
   );
