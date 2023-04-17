@@ -1,23 +1,14 @@
 import Link from "next/link";
+import BackToTopButton from '../components/BackToTopButton';
 
 export default function Footer({ events }) {
   return (
     <footer className="w-full my-8">
-      <div className="text-center lil-text mt-8">
-        <div className="inline-block py-3 px-4 border bg-gray-200 rounded-lg">
-          🍿 Want to build an app like this?{" "}
-          <Link
-            href="https://github.com/replicate/scribble-diffusion"
-            target="_blank"
-          >
-            Fork it on GitHub
-          </Link>{" "}
-          or check out the{" "}
-          <Link href="https://youtu.be/6z07OdbrWOs" target="_blank">
-            video tutorial
-          </Link>
-          .
-        </div>
+      
+       {/* To the top button */}
+       <div className="text-center lil-text mt-8">
+       
+        
       </div>
 
       <div className="text-center lil-text mt-8">
@@ -31,6 +22,13 @@ export default function Footer({ events }) {
           target="_blank"
         >
           Lyumin Zhang
+        </Link>
+        ,{" "}
+        <Link
+          href="https://github.com/axemanks"
+          target="_blank"
+        >
+          Keith Scheldt
         </Link>
         ,{" "}
         <Link
@@ -50,5 +48,6 @@ export default function Footer({ events }) {
         .
       </div>
     </footer>
+    
   );
 }

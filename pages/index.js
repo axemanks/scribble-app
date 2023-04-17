@@ -135,8 +135,12 @@ export default function Home() {
           submissionCount={submissionCount}
         />
       </main>
+      
+      
+
 
       <Script src="https://js.upload.io/upload-js-full/v1" />
+      
     </>
   );
 }

@@ -32,7 +32,7 @@ export default function PromptForm({
         />
 
         <button
-          className={`bg-black text-white rounded-r-md text-small inline-block px-5 py-3 flex-none ${
+          className={`bg-blue-500 hover:bg-blue-600 text-white rounded-r-md text-small font-bold inline-block px-5 py-3 flex-none ${
             disabled ? "opacity-20 cursor-not-allowed	" : ""
           }`}
           type="submit"
@@ -44,3 +44,5 @@ export default function PromptForm({
     </form>
   );
 }
+
+// bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded

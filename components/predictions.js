@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import Loader from "components/loader";
+import BackToTopButton from '../components/BackToTopButton';
 
 export default function Predictions({ predictions, submissionCount }) {
   const scrollRef = useRef(null);
@@ -93,12 +94,14 @@ export function Prediction({ prediction, showLinkToNewScribble = false }) {
       <div className="text-center px-4 opacity-60 text-xl">
         &ldquo;{prediction.input.prompt}&rdquo;
       </div>
+      {/* copy, share, new */}
       <div className="text-center py-2">
+        {/* copy */}
         <button className="lil-button" onClick={copyLink}>
           <CopyIcon className="icon" />
           {linkCopied ? "Copied!" : "Copy link"}
         </button>
-
+            {/* Create New */}
         {showLinkToNewScribble && (
           <Link href="/">
             <button className="lil-button" onClick={copyLink}>
@@ -106,8 +109,10 @@ export function Prediction({ prediction, showLinkToNewScribble = false }) {
               Create a new scribble
             </button>
           </Link>
-        )}
+          
+        )}<BackToTopButton />
       </div>
+      
     </div>
   );
 }
