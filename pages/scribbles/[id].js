@@ -16,7 +16,8 @@ export default function Scribble({ prediction, baseUrl, ogImgUrl }) {
         <meta
           property="og:image"
           content={`${baseUrl}/api/og?id=${prediction.id}`}
-        />
+          //content={`${baseUrl}/api/og?id=${prediction.id}`}
+        />          
       </Head>
       <main className="container max-w-[1024px] mx-auto p-5">
         <Prediction prediction={prediction} showLinkToNewScribble={true} />

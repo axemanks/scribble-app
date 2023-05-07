@@ -99,7 +99,7 @@ export default function Home() {
         <meta
           property="og:image"
           
-          content={`${HOST}/og-b7xwc4g4wrdrtneilxnbngzvti.jpg`}
+          content={`${HOST}/pb6w5hhii5dzjgjytapb324o4m`}
         />
           
         <link rel="icon" href="/favicon.ico" sizes="any" />
